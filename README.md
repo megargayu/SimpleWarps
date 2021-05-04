@@ -1,6 +1,6 @@
 ![logo](logo.png)
 
-#### SimpleWarps is a simple and lightweight permission based warp system for Spigot.
+SimpleWarps is a simple and lightweight permission based warp system for Spigot.
 
 ## Commands
 - **/warp help/usage** - See the help message
@@ -20,4 +20,4 @@
 - **simplewarps.move** - Allows the player to move while waiting for a warp (overrides maxMoveDist)
 - **simplewarps.reload** - Allows the player to reload the config files
 
-#### This is my first ever plugin, so I hope you enjoy!
+This is my first ever plugin, so I hope you enjoy!
