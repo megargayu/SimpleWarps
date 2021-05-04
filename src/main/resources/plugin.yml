@@ -1,0 +1,52 @@
+name: SimpleWarps
+version: 1.0
+main: me.megargayu.simplewarps.SimpleWarps
+api-version: 1.16
+author: megargayu
+description: A simple permissions based warp system for Spigot!
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  warp:
+    description: The main warp command. Run /warp help for more information.
+
+permissions:
+  simplewarps.*:
+    description: Gives access to all warp commands
+    children:
+      simplewarps.warp: true
+      simplewarps.setwarp: true
+      simplewarps.delwarp: true
+      simplewarps.listwarps: true
+      simplewarps.instantwarp: true
+      simplewarps.move: true
+      simplewarps.reload: true
+
+  simplewarps.warp:
+    description: Allows the player to warp to a specified id
+    default: true
+
+  simplewarps.setwarp:
+    description: Allows the player to set a warp
+    default: op
+
+  simplewarps.delwarp:
+    description: Allows the player to delete a warp
+    default: op
+
+  simplewarps.listwarps:
+    description: Allows the player to see all warps using the list command
+    default: true
+
+  simplewarps.instantwarp:
+    description: Allows the player to instantly warp (overrides warpTime)
+    default: op
+
+  simplewarps.move:
+    description: Allows the player to move while waiting for a warp (overrides maxMoveDist)
+    default: op
+
+  simplewarps.reload:
+    description: Allows the player to reload the config files
+    default: op

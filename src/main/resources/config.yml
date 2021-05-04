@@ -1,0 +1,73 @@
+#     _____ _                 _   __          __
+#    / ____(_)               | |  \ \        / /
+#   | (___  _ _ __ ___  _ __ | | __\ \  /\  / /_ _ _ __ _ __  ___
+#    \___ \| | '_ ` _ \| '_ \| |/ _ \ \/  \/ / _` | '__| '_ \/ __|
+#    ____) | | | | | | | |_) | |  __/\  /\  / (_| | |  | |_) \__ \
+#   |_____/|_|_| |_| |_| .__/|_|\___| \/  \/ \__,_|_|  | .__/|___/
+#                      | |                             | |
+#                      |_|                             |_|
+#                        Created by megargayu
+
+
+# The time the player has to wait in order to warp (in seconds)
+# This is useful when you want to prevent combat warping
+# Negative numbers get turned into positive numbers (-1 turns into 1)
+# Note: you might want to change messages.warp.wait for longer time intervals
+warpTime: 5
+
+# The maximum move distance allowed (in blocks)
+# This is useful as some mobs moving around the player would not be combat warping
+# Set to a negative number to let the player move around as far as they want
+# This is ignored when warpTime is 0
+maxMoveDist: 1
+
+# The valid warp characters a warp id can contain
+# This is case sensitive
+validWarpChars: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
+
+# Maximum warp id length
+# Negative or 0 value lets players make as long of a warp id as they want
+maxWarpIdLength: 16
+
+# Messages that appear when commands are used
+# Some messages contain special variables (eg. ${time}) which are replaced by the program.
+messages:
+  pluginPrefix: "&f[&bSimpleWarps&f]"
+
+  help:
+    usage: "&b/warp help/usage&f - See this help message"
+    usagePrefix: "&6SimpleWarps Commands:&f"
+
+  listwarps: # Messages for the /warp list command
+    usage: "&b/warp list&f - See all warps on this server"
+    noPermissionMessage: "&cYou are not allowed to use the list warp command!"
+    noWarps: "&bThere are currently no warps!"
+    listPrefix: "&6All warps:&f"
+
+  setwarp: # Messages for the /warp set <id> command
+    usage: "&b/warp set/create/add <id>&f - Set a warp"
+    noPermissionMessage: "&cYou are not allowed to set a warp!"
+    onlyPlayers: "&cOnly players can set a warp!"
+    invalidChar: "&cYou put an invalid character in your warp id!"
+    tooLong: "&cYour warp id is too long!"
+    duplicateWarp: "&cThat warp already exists!"
+    success: "&bYour warp has been created successfully!"
+
+  delwarp: # Messages for the /warp del <id> command
+    usage: "&b/warp del/remove/delete <id>&f - Delete an existing warp"
+    noPermissionMessage: "&cYou are not allowed to delete a warp!"
+    noExist: "&cThat warp doesn't exist!"
+    success: "&bThat warp has been deleted successfully!"
+
+  reload: # Messages for the /warp reload command
+    usage: "&b/warp reload&f - Reload the plugin's config"
+    success: "&bReloaded the config successfully!"
+
+  warp: # Messages for the /warp <id> command
+    usage: "&b/warp <id>&f - Warp to a specific id"
+    noPermissionMessage: "&cYou are not allowed to warp!"
+    onlyPlayers: "&cOnly players can warp!"
+    noExist: "&cA warp with that id doesn't exist!"
+    wait: "&bPlease wait &6${time}&b seconds..."
+    success: "&bYou have been teleported successfully!"
+    moved: "&cThe teleportation failed because you moved more than ${maxMoveDist} block(s)!"
