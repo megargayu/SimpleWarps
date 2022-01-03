@@ -9,6 +9,7 @@ SimpleWarps is a simple and lightweight permission based warp system for Spigot.
 - **/warp del/delete/remove** - Delete an existing warp
 - **/warp reload** - Reload the plugin's config
 - **/warp <id>** - Warp to a specific id
+- **/warps** - An alias for /warp list
 
 ## Permissions
 - **simplewarps.**\* - Gives access to all warp commands

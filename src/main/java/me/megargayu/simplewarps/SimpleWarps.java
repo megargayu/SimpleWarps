@@ -1,6 +1,7 @@
 package me.megargayu.simplewarps;
 
 import me.megargayu.simplewarps.commands.CommandWarp;
+import me.megargayu.simplewarps.commands.CommandWarps;
 import org.apache.commons.lang.text.StrSubstitutor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -38,8 +39,9 @@ public final class SimpleWarps extends JavaPlugin {
             return;
         }
 
-        // Register warp command
+        // Register warp and warps commands
         Objects.requireNonNull(this.getCommand("warp")).setExecutor(new CommandWarp(this));
+        Objects.requireNonNull(this.getCommand("warps")).setExecutor(new CommandWarps(this));
     }
 
     private String getMessage(String path) {

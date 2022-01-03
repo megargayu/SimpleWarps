@@ -38,8 +38,8 @@ messages:
     usage: "&b/warp help/usage&f - See this help message"
     usagePrefix: "&6SimpleWarps Commands:&f"
 
-  listwarps: # Messages for the /warp list command
-    usage: "&b/warp list&f - See all warps on this server"
+  listwarps: # Messages for the /warp list and /warps command
+    usage: "&b/warp list&f and &b/warps&f - See all warps on this server"
     noPermissionMessage: "&cYou are not allowed to use the list warp command!"
     noWarps: "&bThere are currently no warps!"
     listPrefix: "&6All warps:&f"

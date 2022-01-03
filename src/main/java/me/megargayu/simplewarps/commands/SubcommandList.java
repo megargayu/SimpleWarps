@@ -5,7 +5,7 @@ import org.bukkit.command.CommandSender;
 
 public class SubcommandList {
     public static boolean handleList(SimpleWarps plugin, CommandSender sender) {
-        // Only players can set warps
+        // Check permission
         if (!sender.hasPermission("simplewarps.listwarps")) {
             sender.sendMessage(plugin.getMessage("listwarps.noPermissionMessage", true));
             return false;
